@@ -27,7 +27,7 @@ const Header = () => {
           <div className='nav_wrapper d-flex align-items-center justify-content-between'>
               {/* ========Logo======== */}
                 <div className='logo'>
-                  <img src={logo} alt=''/> 
+                  <img src={logo} alt=''draggable="false"/> 
                 </div>
               {/* ========Logo End======== */}
 
@@ -37,8 +37,8 @@ const Header = () => {
                     {
                       nav_links.map((item,index)=>(
                         <li className="nav__item" key={index}>
-                          <NavLink to = {item.path} className={navClass=>navClass.isActive ? 'active__link' : ""}>
-                            {item.display}
+                          <NavLink to = {item.path} className={navClass=>navClass.isActive ? 'active__link' : ""} draggable="false">
+                            {item.display} 
                           </NavLink>
                         </li>
                       ))
@@ -49,9 +49,9 @@ const Header = () => {
 
                 <div className='nav_right d-flex align-items-center gap-4'>
                     <div className='nav_btns d-flex align-items-center gap-4'>
-                      <Button className="btn secondary__btn"><Link to='/login'>Login</Link>
+                      <Button className="btn secondary__btn" ><Link to='/login' draggable="false">Login</Link>
                       </Button>
-                      <Button className="btn primary__btn"><Link to='/register'>Register</Link>
+                      <Button className="btn primary__btn"><Link to='/register' draggable="false">Register</Link>
                       </Button>
                     </div>
                     <span className="mobile__menu"></span>
